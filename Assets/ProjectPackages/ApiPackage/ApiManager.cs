@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class ApiManager : MonoBehaviour
+public class ApiManager
 {
-
-    IEnumerator GetRequest()
+    public static IEnumerator GetRequest(string url, System.Action<string> onComplete, System.Action onError)
     {
-        string url = "";
-
         using(UnityWebRequest webRequest = UnityWebRequest.Get(url))
         {
             yield return webRequest.SendWebRequest();
@@ -17,10 +14,12 @@ public class ApiManager : MonoBehaviour
             if(webRequest.isNetworkError)
             {
                 Debug.Log("error = " + webRequest.error);
+                onError?.Invoke();
             }
             else
             {
                 Debug.Log("sucess = " + webRequest.downloadHandler.text);
+                onComplete?.Invoke(webRequest.downloadHandler.text);
             }
         }
     }
