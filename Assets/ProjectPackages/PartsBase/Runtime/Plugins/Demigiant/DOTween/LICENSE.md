@@ -1,0 +1,1 @@
+https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676?aid=1100lNUQ&pubref=unity-install-dotween&utm_campaign=unity_affiliate&utm_medium=affiliate&utm_source=partnerize-linkmaker#content
