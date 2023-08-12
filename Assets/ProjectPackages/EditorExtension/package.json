@@ -1,0 +1,6 @@
+{
+    "name": "com.tanuki.editor-extension",
+    "version": "0.0.1",
+    "displayName": "Tanuki Editor",
+    "description": "This is an editor extension package"
+}
